@@ -1,8 +1,9 @@
 (defpackage :tk.luoxing123.pathnames
-  (:use :common-lisp)
-  (:export
-   :list-directory))
-
+  (:use :common-lisp :tk.luoxing123.utility)
+  (:export file-exists-p))
+(defun file-exists-p(path)
+  (probe-file pathname) )
+  
 ;;implicit
 (defun directory-pathname-p(p)
   (and

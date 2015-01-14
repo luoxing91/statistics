@@ -2,7 +2,10 @@
 (defun hello()
   (write-string "hello, world!"))
 ;allow a running cl process to accept a Telent login on port 4000 on
-										;the
+(defun clip (start end i)
+  (cond ((i > end) end)
+		((i< start) start)
+		(t i)))							;the
 (defun start-telnet (&optional (port 400))
   (let ((passive (socket:make-socket :connect :passive
 									 :local-host "127.l"
